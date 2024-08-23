@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado, naynay!</title>
+    <style>
+        /* Estilos e animações */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .background {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.5;
+            z-index: -1;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1, h2 {
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        .att1, .att2, .att3, .att4, button {
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./fino senores.jpg" alt="" class="background">
+    <div class="container">
+        <h1>OBRIGADO, NAYNAY!</h1>
+        <h2>Atributos melhorados:</h2>
+        <p class="att1">Amor: +40%</p>
+        <p class="att2">Felicidade: +23%</p>
+        <p class="att3">Vontade de se matar: -32%</p>
+        <p class="att4">Mau humor: -17%</p>
+        <button>DAR DE LADINHO</button>
+    </div>
+
+    <script>
+        function animateElements() {
+            document.querySelector('h1').style.animationDelay = '0.5s';
+            document.querySelector('h1').style.opacity = 1;
+
+            document.querySelector('h2').style.animationDelay = '1s';
+            document.querySelector('h2').style.opacity = 1;
+
+            document.querySelector('.att1').style.animationDelay = '1.5s';
+            document.querySelector('.att2').style.animationDelay = '2s';
+            document.querySelector('.att3').style.animationDelay = '2.5s';
+            document.querySelector('.att4').style.animationDelay = '3s';
+
+            document.querySelector('button').style.animationDelay = '3.5s';
+        }
+
+        window.onload = animateElements;
+    </script>
+</body>
+</html>
+
